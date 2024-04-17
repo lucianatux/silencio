@@ -1,6 +1,26 @@
-body {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+  }
+  body {
+    overflow-x: hidden;
+    position: relative;
     display: flex;
-}
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    text-decoration: none;
+  }
+ 
+  
 
 .columna {
     width: 20%;
@@ -23,56 +43,39 @@ body {
     color: #fff;
     font-size: 50px;
 }
-
-.tanda1{
-    animation: mover1 8s linear infinite;
+.pensamiento{
+    white-space: nowrap; 
 }
-.tanda2{
-    animation: mover2 5s linear infinite;
-    animation-duration: 15s;
-}
-.tanda3{
-    animation: mover3 10s linear infinite;
-}
-
-@keyframes mover1 {
+@keyframes mover {
     from {
-        left: -100%;
+        right: var(--anim-start);
     }
 
     to {
-        left: 100%;
+        right: 100%;
     }
 }
-@keyframes mover2 {
-    from {
-        left: -50%;
-    }
 
-    to {
-        left: 100%;
-    }
+/* Clases para aplicar la animación con diferentes valores de inicio */
+.tanda1 {
+    --anim-start: -80%;
+    animation: mover 5s linear infinite;
 }
-@keyframes mover3 {
-    from {
-        left: -20%;
-    }
-
-    to {
-        left: 100%;
-    }
+.tanda2 {
+    --anim-start: -50%; 
+    animation: mover 20s linear infinite;
+}
+.tanda3 {
+    --anim-start: -20%; 
+    animation: mover 8s linear infinite;
+}
+.tanda4{
+    --anim-start: -70%; 
+    animation: mover 40s linear infinite;
 }
 
 #mundoExterno video,
 #textoFinal {
     display: none;
 }
-/* Animación para mover pensamientos */
-@keyframes moveLeftToRight {
-    from {
-        left: 0;
-    }
-    to {
-        left: 100%;
-    }
-}
+
