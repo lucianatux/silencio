@@ -1,0 +1,78 @@
+body {
+    display: flex;
+}
+
+.columna {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+#mundoExterno {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    background-image: url('backyard.jpeg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+#mundoExterno p {
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    font-size: 50px;
+}
+
+.tanda1{
+    animation: mover1 8s linear infinite;
+}
+.tanda2{
+    animation: mover2 5s linear infinite;
+    animation-duration: 15s;
+}
+.tanda3{
+    animation: mover3 10s linear infinite;
+}
+
+@keyframes mover1 {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+@keyframes mover2 {
+    from {
+        left: -50%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+@keyframes mover3 {
+    from {
+        left: -20%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+#mundoExterno video,
+#textoFinal {
+    display: none;
+}
+/* Animación para mover pensamientos */
+@keyframes moveLeftToRight {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
