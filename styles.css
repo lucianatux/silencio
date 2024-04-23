@@ -33,7 +33,7 @@
     height: 80vh;
     position: relative;
     background-image: url('backyard.jpeg');
-    background-size: cover;
+    background-size: contain;
     overflow: hidden;
 }
 
